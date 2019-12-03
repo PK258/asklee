@@ -16,7 +16,7 @@ def values():
                     zip(request.form.getlist('user_id'),
                         request.form.getlist('from_date'),
                         request.form.getlist('to_date')):
-                fetch_plot_data(UserID, FromDate, ToDate)
+                fetch_plot_data()
                 return render_template('Asklee_paths.html')
             else:
                 return render_template('index.html')

@@ -4,7 +4,7 @@ import plotly
 import plotly.express as px
 import config
 
-def fetch_plot_data(UserID, FromDate, ToDate):
+def fetch_plot_data():
     conn = psycopg2.connect(
         database="postgres",
         user="postgres",

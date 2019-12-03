@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def page():
-    return render_template('Asklee_paths.html')
+    return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def values():
@@ -20,7 +20,7 @@ def values():
 #                return render_template('Asklee_paths.html')
             return render_template('Asklee_paths.html')
         else:
-            return render_template('index.html')
+            return render_template('Asklee_paths.html')
     except Exception as e:
         print(str(e))
 

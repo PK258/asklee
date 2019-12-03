@@ -1,10 +1,9 @@
 import psycopg2
 import plotly.graph_objects as go
-import plotly
 import plotly.express as px
 import config
 
-def fetch_plot_data(UserID, FromDate, ToDate):
+def fetch_plot_data(FromDate, ToDate):
     conn = psycopg2.connect(
         database="postgres",
         user="postgres",
@@ -13,7 +12,7 @@ def fetch_plot_data(UserID, FromDate, ToDate):
         port='5432'
     )
     cur = conn.cursor()
-    cur.execute(config.read_data)
+    cur.execute(config.read_data, (FromDate, ToDate,))
     rows = cur.fetchall()
     startLat = []
     startLon = []

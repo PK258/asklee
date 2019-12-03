@@ -13,11 +13,10 @@ def page():
 def values():
     try:
         if request.method == 'POST':
-            for UserID, FromDate, ToDate in \
-                    zip(request.form.getlist('user_id'),
-                        request.form.getlist('from_date'),
+            for FromDate, ToDate in \
+                    zip(request.form.getlist('from_date'),
                         request.form.getlist('to_date')):
-                fig = fetch_plot_data(UserID, FromDate, ToDate)
+                fig = fetch_plot_data(FromDate, ToDate)
                 plotly.offline.plot(fig, filename='/home/git/asklee/templates/Asklee_paths.html')
             return render_template('Asklee_paths.html')
         else:

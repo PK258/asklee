@@ -4,7 +4,7 @@ import plotly
 import plotly.express as px
 import config
 
-def fetch_plot_data():
+def fetch_plot_data(UserID, FromDate, ToDate):
     conn = psycopg2.connect(
         database="postgres",
         user="postgres",
@@ -51,4 +51,4 @@ def fetch_plot_data():
             'style': "carto-darkmatter",
             'zoom': 8})
 
-    plotly.offline.plot(fig, filename='/templates/Asklee_paths.html')
+    plotly.offline.plot(fig, filename='/home/git/asklee/templates/Asklee_paths.html')

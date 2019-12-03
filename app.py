@@ -12,13 +12,12 @@ def page():
 def values():
     try:
         if request.method == 'POST':
-#            for UserID, FromDate, ToDate in \
-#                    zip(request.form.getlist('user_id'),
-#                        request.form.getlist('from_date'),
-#                        request.form.getlist('to_date')):
-#           fetch_plot_data()
-#                return render_template('Asklee_paths.html')
-            return render_template('Asklee_paths.html')
+            for UserID, FromDate, ToDate in \
+                    zip(request.form.getlist('user_id'),
+                        request.form.getlist('from_date'),
+                        request.form.getlist('to_date')):
+                fetch_plot_data(UserID, FromDate, ToDate)
+                return render_template('Asklee_paths.html')
         else:
             return render_template('Asklee_paths.html')
     except Exception as e:

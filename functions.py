@@ -51,4 +51,4 @@ def fetch_plot_data(UserID, FromDate, ToDate):
             'style': "carto-darkmatter",
             'zoom': 8})
 
-    plotly.offline.plot(fig, filename='/home/git/asklee/templates/Asklee_paths.html')
+    return fig

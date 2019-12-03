@@ -2,6 +2,7 @@ import psycopg2
 import plotly.graph_objects as go
 import plotly.express as px
 import config
+import plotly
 
 def fetch_plot_data(FromDate, ToDate):
     conn = psycopg2.connect(
@@ -49,5 +50,4 @@ def fetch_plot_data(FromDate, ToDate):
             'center': {'lon': 4.4834, 'lat': 50.7528},
             'style': "carto-darkmatter",
             'zoom': 8})
-
     return fig

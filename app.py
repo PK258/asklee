@@ -17,13 +17,14 @@ def values():
                     zip(request.form.getlist('from_date'),
                         request.form.getlist('to_date')):
                 fig = fetch_plot_data(FromDate, ToDate)
-                plotly.offline.plot(fig, filename='/home/git/asklee/templates/Asklee_paths.html')
-            return render_template('Asklee_paths.html')
+                plotly.offline.plot(fig,
+                                    filename='/templates/asklee_paths.html',
+                                    auto_open=False)
+            return render_template('asklee_paths.html')
         else:
-            return render_template('Asklee_paths.html')
+            return render_template('index.html')
     except Exception as e:
         print(str(e))
-
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5001)

@@ -40,7 +40,7 @@ ipykernel==4.10.0
 ipython==5.8.0
 ipython-genutils==0.2.0
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 jsonfield==2.0.2
 jsonschema==3.0.0a2
 jupyter-client==5.2.3

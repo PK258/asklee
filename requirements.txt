@@ -68,7 +68,7 @@ pyparsing==2.3.1
 pyrsistent==0.14.4
 python-dateutil==2.7.3
 pytz==2018.5
-PyYAML==5.1
+PyYAML==5.4
 pyzmq==17.1.2
 requests==2.19.1
 -e git+https://github.com/postrational/rest_api_demo@1660892257a41e19f8c7b21c81fbb05be5c188d5#egg=rest_api_demo
